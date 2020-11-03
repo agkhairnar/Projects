@@ -1,0 +1,300 @@
+* { 
+  
+  box-sizing: border-box;
+  
+}
+
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+
+h1,h2,h3,h4,h5,h6{
+  text-transform:uppercase;
+}
+
+h4{
+  color:Gray ;
+}
+body{
+  background:url('http://geoffreyorban.be/white_texture.png') repeat;
+}
+
+section{
+  padding:0 15px;
+  @media screen only and (min-width:641px){
+    padding:0;
+  }
+}
+
+/*HEADER
+*************/
+header{
+  padding: 1.0rem 0;
+  position:fixed;
+  z-index:800;
+  .title-area{
+     
+      padding-left:10px;
+      border-left: 2px solid teal;
+      h1{
+        line-height:1.2rem !important;
+        font-size:1.6em !important;
+        color:white;
+        font-family:VT323,arial, sans-serif;
+        span.fa-flask{
+          line-height:0 !important;
+          margin-right:5px;
+          font-size:1.5rem;
+        }
+        a{
+          padding:0 !important;
+        }
+      }
+      h2{
+        
+        color:grey;
+        line-height:2rem !important;
+        font-size:0.8rem !important;
+      }
+    }
+  
+  .top-bar-section{
+    
+    .right{
+      
+      li a:active{
+        -moz-box-shadow: inset teal  0 -1px 0 0;
+        -webkit-box-shadow: inset teal  0 -1px 0 0;
+        box-shadow: inset teal 0 -1px 0 0;
+      }
+      @media only screen and (min-width:40.0625em){ //641px; when in medium minimum
+           li a:hover{
+          -moz-box-shadow: inset teal  0 -1px 0 0;
+          -webkit-box-shadow: inset teal  0 -1px 0 0;
+          box-shadow: inset teal 0 -1px 0 0;
+          }
+      }
+
+      li a{
+         
+        @media only screen and (max-width:40.0625em){ //641px;
+            text-transform:uppercase;
+        }
+       }
+      
+      li:nth-child(2){
+        border-left:1px solid grey;
+        border-right:1px solid grey;
+      }
+    }
+  }
+}
+/*
+
+***************/
+.social-media{
+  background:transparent;
+  position:fixed;
+  display:none;
+  ul{
+    list-style-type:none;
+    
+    li a{
+      color:rgba(0,128,128,0.51);
+      &:hover{
+        color:teal;
+      }
+    }
+  }
+}
+/*
+CONTENT
+***************/
+main{
+  
+
+  .about-me{
+    background:url('http://users.skynet.be/fa341830/codepen/backgroundfolio.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position-y:30%;
+    border-bottom: 4px solid teal;
+    
+    .title-intro{
+     
+       h1{
+        font-family:VT323,arial, sans-serif;
+        color:white;
+        font-size:2.5em;
+        border-bottom:2px solid white;
+        text-align:center;
+         
+         .logo{
+          margin-right:1rem;
+          font-size:3em;
+          display:block;
+          
+         }
+
+         @media screen and(min-width: 43.75em){ //670px;
+           font-size:3.5em;
+         }
+         
+              @media screen and(min-width: 62.5em){ //1000px;
+           font-size:5em;
+         }
+       
+      }
+
+      h2{
+        color:white;
+        font-size:0.8em;
+        letter-spacing:0.5em;
+        text-align:center;
+        background:rgba(0,0,0,0.3);
+      }
+    }
+    
+    .social-networks{
+      
+      .icon-social{
+        padding: 1rem;
+        a{
+          color:rgba(255,255,255,0.5);
+          &:hover{
+              color:rgba(255,255,255,1);
+          }
+        }
+      }
+    }
+    
+  } //end intro (about-me)
+  
+  section .row > h3{
+     color:grey;
+     margin:1rem 0;
+     font-size:2em;
+  }
+}
+
+/*PORTFOLIO
+==============*/
+
+  .portfolio{
+   
+    .thumbnails{
+      
+      .overlay{
+        position:absolute;
+        display:none;
+        left:0;
+        top: 0;
+        width:100%;
+        height:100%;
+        background-color:rgba(0,0,0,0.5);
+        padding:5%;
+        overflow:hidden;
+        .v-align{
+            position:absolute;
+            top: 50%;
+            width:90%;
+            transform: translateY(-50%);
+        }
+      }
+      
+      .wrapper-project{
+        position:relative;
+        color:white;
+        
+        p{
+          margin:0;
+        }
+        
+        .more-info-btn{
+          position:absolute;
+          top:0;
+          right:0;
+          z-index:500;
+          background: teal !important;
+        }
+   
+        h4{
+           color:white;
+         }
+        
+        .list-tech{
+          margin:0;
+          
+          li{
+            display:inline-block;
+          }
+        }
+      }
+      
+      @media screen and(min-width:64.0625em){ //1025px
+      
+      cursor:pointer;
+ 
+      .wrapper-project{
+        overflow:hidden;
+        position:relative;
+          &:hover .overlay{
+            top:0;
+          }
+        }
+      
+      .overlay{
+          display:block;
+          background-color:rgba(0,0,0,0.5);
+          position: absolute;
+          top: 300px;
+          left:0;
+          width:100%;
+          height:100%;
+          transition: all 0.2s ease-in;
+          -moz-transition:all 0.2s ease-in;
+          -webkit-transition:all 0.2s ease-in;
+                  
+        p{
+          width:100%;
+          vertical-align:middle;
+          span{
+            color:white;
+            padding: 0 2%;
+            &:hover{
+              color:teal;
+            }
+          }
+        }
+       }
+      } //media query end
+    }
+}
+
+//ABOUT
+.about{
+  
+  h4{
+    margin:1.2rem 0;
+    font-size:1.4em;
+  }
+  
+  @media screen and(min-width:40.0625em){
+      h4{
+        margin:0;
+      }
+    }
+}
+
+//CONTACT
+
+.contact{
+  
+  h4{
+ 
+  }
+  .email{
+    font-size:2em;
+  }
+  
+}
+
